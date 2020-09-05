@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './LabSim.dart';
+import './OHM/ohmTheory.dart';
 
 class Lab extends StatelessWidget {
   Lab(this.s);
@@ -23,30 +24,7 @@ class Lab extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.all(5.0),
         children: <Widget>[
-          Container(
-            width: double.infinity,
-            padding: EdgeInsets.only(top: 10, left: 10),
-            child: Text(
-              'Aim: ' + s + '\n',
-              style: TextStyle(fontSize: 15),
-            ),
-          ),
-          Container(
-            width: double.infinity,
-            padding: EdgeInsets.only(top: 10, left: 10),
-            child: Text(
-              'Apparatus: ' + s + '\n',
-              style: TextStyle(fontSize: 15),
-            ),
-          ),
-          Container(
-            width: double.infinity,
-            padding: EdgeInsets.only(top: 10, left: 10),
-            child: Text(
-              'Theory: ' + s + '\n',
-              style: TextStyle(fontSize: 15),
-            ),
-          ),
+          Shubham(s),
           Container(
             alignment: Alignment.center,
             child: RaisedButton(
@@ -62,5 +40,24 @@ class Lab extends StatelessWidget {
         ],
       ),
     ));
+  }
+}
+
+class Shubham extends StatelessWidget {
+  Shubham(this.s);
+  final s;
+  @override
+  Widget build(BuildContext context) {
+    if (s == 'Ohm\'s Law') {
+      return OhmTheory();
+    } else if (s == 'Chemical Equillibrium') {
+      return Text('Time pass');
+    } else if (s == 'Linear Expansion Using Heat') {
+      return Text('Time pass');
+    } else if (s == 'Chemical Analysis of Ammonium Sulphate') {
+      return Text('timepass');
+    } else {
+      return Text('Error');
+    }
   }
 }

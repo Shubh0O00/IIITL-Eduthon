@@ -6,7 +6,7 @@ class OhmLaw extends StatefulWidget {
 }
 
 class _OhmLawState extends State<OhmLaw> {
-  int r = 0;
+  double r = 0;
   double v = 0.0, i = 0.0;
   void buttonr1() {
     if (r != 0) {
@@ -145,27 +145,6 @@ class _OhmLawState extends State<OhmLaw> {
             'After some variations click on the button below to draw the table and graph.',
             style: TextStyle(fontSize: 20),
             textAlign: TextAlign.center,
-          ),
-        ),
-        Container(
-          margin: EdgeInsets.all(20),
-          child: RaisedButton(
-            padding: EdgeInsets.all(20),
-            child: Text('Draw Table and Graph', style: TextStyle(fontSize: 25)),
-            onPressed: null,
-            color: Colors.deepOrange,
-          ),
-        ),
-        Container(
-          child: Text('\n\n\nYahan jaadu hoga\n\n'),
-        ),
-        Container(
-          margin: EdgeInsets.all(20),
-          child: RaisedButton(
-            padding: EdgeInsets.all(15),
-            child: Text('Take Quiz', style: TextStyle(fontSize: 20)),
-            onPressed: null,
-            color: Colors.deepOrange,
           ),
         ),
         Container(
