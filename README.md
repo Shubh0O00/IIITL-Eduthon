@@ -1,16 +1,10 @@
 # SimulatorAPP
 
-A new Flutter project.
+A project by Team Hexotrons
 
-## Getting Started
+requirements: Flutter Sdk
+                VS code or Android studio setup for flutter
 
-This project is a starting point for a Flutter application.
+To run:
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+download apk file according to the android device or if not sure download the fat apk from the APK folder in the directory and install it in android device 

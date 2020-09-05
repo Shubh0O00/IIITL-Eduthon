@@ -1,6 +1,8 @@
+import 'package:SimulatorAPP/EXPANSION/thermalTheory.dart';
 import 'package:flutter/material.dart';
 import './LabSim.dart';
 import './OHM/ohmTheory.dart';
+import './EXPANSION/thermalTheory.dart';
 
 class Lab extends StatelessWidget {
   Lab(this.s);
@@ -51,11 +53,11 @@ class Shubham extends StatelessWidget {
     if (s == 'Ohm\'s Law') {
       return OhmTheory();
     } else if (s == 'Chemical Equillibrium') {
-      return Text('Time pass');
+      return Text('Coming Soon');
     } else if (s == 'Linear Expansion Using Heat') {
-      return Text('Time pass');
+      return ThermalTheory();
     } else if (s == 'Chemical Analysis of Ammonium Sulphate') {
-      return Text('timepass');
+      return Text('Coming Soon');
     } else {
       return Text('Error');
     }
