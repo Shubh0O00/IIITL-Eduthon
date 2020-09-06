@@ -26,10 +26,12 @@ download apk file according to the android device or if not sure download the fa
 
 The link to the apk: https://drive.google.com/drive/folders/1NVsii-X44MPKlIxCH5r7jF3h8e-uAFs_?usp=sharing
 
-Developed by- Aman Verma
+Developed by- 
 
-              Aniket Tiwari
-              
-              Jayvardhan Patil
-              
-              Shubham Pandit  
+Aman Verma
+
+Aniket Tiwari
+
+Jayvardhan Patil
+
+Shubham Pandit  
