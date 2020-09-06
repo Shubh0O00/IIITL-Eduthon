@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../graph.dart';
 
 class OhmLaw extends StatefulWidget {
   @override
@@ -8,6 +9,22 @@ class OhmLaw extends StatefulWidget {
 class _OhmLawState extends State<OhmLaw> {
   double r = 0;
   double v = 0.0, i = 0.0;
+  var x = [3.0, 6.0, 9.0, 12.0, 15.0];
+  var y = [0.0, 0.0, 0.0, 0.0, 0.0];
+  void graphbutton() {
+    if (r == 0) {
+      showAlertDialog(context, 'Choose a Resister first!!');
+    } else if (v == 0) {
+      showAlertDialog(context, 'Increase the voltage first');
+    } else {
+      setState(() {
+        for (int i = 0; i < 5; i++) {
+          y[i] = x[i] / r;
+        }
+      });
+    }
+  }
+
   void buttonr1() {
     if (r != 0) {
       showAlertDialog(
@@ -57,6 +74,9 @@ class _OhmLawState extends State<OhmLaw> {
       i = 0;
       v = 0;
       r = 0;
+      for (int i = 0; i < 5; i++) {
+        y[i] = 0;
+      }
     });
   }
 
@@ -147,6 +167,15 @@ class _OhmLawState extends State<OhmLaw> {
             textAlign: TextAlign.center,
           ),
         ),
+        Container(
+            margin: EdgeInsets.all(30),
+            child: RaisedButton(
+              padding: EdgeInsets.all(20),
+              child: Text('Draw Graph', style: TextStyle(fontSize: 25)),
+              color: Colors.deepOrange,
+              onPressed: graphbutton,
+            )),
+        Container(margin: EdgeInsets.all(20), child: Graph(x, y)),
         Container(
           margin: EdgeInsets.all(20),
           child: RaisedButton(
